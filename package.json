@@ -1,12 +1,21 @@
 {
   "name": "calcComissionService",
-  "version": "1.0.0",
-  "description": "",
+  "versison": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf ./node_modules && rm -rf package-lock.json",
+    "lint": "eslint --ext .ts src/ --fix && npm run lint:types"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.1.0"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "prettier": "^2.3.0",
+    "typescript": "^4.2.4"
+  }
 }

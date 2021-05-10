@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+
+    "lib": ["es2018", "dom"],
+    "jsx": "react",
+    "target": "es5",
+    "baseUrl": "./src",
+    "outDir": "./out",
+
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "strict": false,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "suppressImplicitAnyIndexErrors": true,
+
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "noEmitOnError": false,
+    "noErrorTruncation": true,
+    "keyofStringsOnly": true
+  }
+}
