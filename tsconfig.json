@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
+    "target": "es2018",
+
     "allowJs": true,
     "importHelpers": true,
     "noEmitHelpers": true,
 
     "lib": ["es2018", "dom"],
     "jsx": "react",
-    "target": "es5",
     "baseUrl": "./src",
     "outDir": "./out",
 

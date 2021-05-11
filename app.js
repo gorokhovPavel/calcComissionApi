@@ -1,4 +1,4 @@
-const commission = require('./src/Modules/Commission/index')
+const commission = require('./src/Modules/Commission/Controllers')
 
 const inputFileName = process.argv[2]
 
