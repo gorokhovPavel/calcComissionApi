@@ -1,5 +1,5 @@
-const fs = require('fs')
-const util = require('util')
+import fs from 'fs'
+import util from 'util'
 import {encoding} from '../../../Common/const'
 import {ITransaction} from '../models'
 
@@ -16,10 +16,8 @@ const getListFromJson = (json_data: string): ITransaction[] => {
     return JSON.parse(correct)
 }
 
-module.exports = {
-    setRun: (inputFile: string) => {
-        getStuff(inputFile).then((data) => {
-            console.log(getListFromJson(data))
-        })
-    },
+export const setRun = (inputFile: string) => {
+    getStuff(inputFile).then((data) => {
+        console.log(getListFromJson(data))
+    })
 }
