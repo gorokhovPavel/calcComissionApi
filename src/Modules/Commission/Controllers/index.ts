@@ -1,18 +1,6 @@
-const fs = require('fs')
-const util = require('util')
-
-import {encoding} from '../../../Common/const'
 import {ITransaction} from '../models'
-
-/**
- * Read file thought encoding
- * @param inputFileName name of current file in current directory
- */
-const getStuff = (inputFileName: string) => {
-    const readFile = util.promisify(fs.readFile)
-
-    return readFile(inputFileName, encoding)
-}
+import {getReadFile} from '../../../Common/utils'
+import {getCalculatedComission} from './Calculate'
 
 /**
  * Parse input file to array of current type
@@ -25,13 +13,18 @@ const getListFromJson = (jsonData: string): ITransaction[] => {
     return JSON.parse(correct)
 }
 
-export const setRun = (inputFile?: string) => {
+/**
+ * Main function in this module of Comission, is running file and writing result on console
+ */
+export const setRunCalculating = (inputFile?: string) => {
     if (!inputFile) {
         console.log('No input file')
         return
     }
 
-    getStuff(inputFile).then((data) => {
-        console.log(getListFromJson(data))
+    getReadFile(inputFile).then((data) => {
+        const transactionList = getListFromJson(data)
+
+        getCalculatedComission(transactionList)
     })
 }

@@ -1,0 +1,14 @@
+const fs = require('fs')
+const util = require('util')
+
+import {encoding} from './const'
+
+/**
+ * Mode of reading file through encoding
+ * @param inputFileName name of current file in current directory
+ */
+export const getReadFile = (inputFileName: string) => {
+    const readFile = util.promisify(fs.readFile)
+
+    return readFile(inputFileName, encoding)
+}
