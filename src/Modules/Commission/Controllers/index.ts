@@ -7,10 +7,17 @@ import {getCalculatedComission} from './Calculate'
  * @param jsonData input json string
  */
 const getListFromJson = (jsonData: string): ITransaction[] => {
+    let reusltParsedFile = []
     const regex = /\,(?=\s*?[\}\]])/g
     const correct = jsonData.replace(regex, '')
 
-    return JSON.parse(correct)
+    try {
+        reusltParsedFile = JSON.parse(correct)
+    } catch (exc) {
+        console.log('There is error on the trying to parse input json file')
+    }
+
+    return reusltParsedFile
 }
 
 /**
