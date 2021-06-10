@@ -14,7 +14,7 @@ export interface ITransaction {
  */
 export interface ICurrOperation {
     amount: number
-    currency: ECurrency
+    currency?: ECurrency
 }
 
 /**
