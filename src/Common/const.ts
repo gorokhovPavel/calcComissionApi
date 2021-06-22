@@ -1,1 +1,1 @@
-export const  encoding = 'utf8'
+export const encoding = 'utf8'
