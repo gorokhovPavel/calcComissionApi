@@ -4,7 +4,7 @@ const util = require('util')
 import {encoding} from './const'
 
 /**
- * Mode of reading file through encoding
+ * Mode of reading file encoding
  * @param inputFileName name of current file in current directory
  */
 export const getReadFile = (inputFileName: string) => {
