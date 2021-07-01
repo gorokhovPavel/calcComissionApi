@@ -10,5 +10,6 @@ import {encoding} from './const'
 export const getReadFile = (inputFileName: string) => {
     const readFile = util.promisify(fs.readFile)
 
+
     return readFile(inputFileName, encoding)
 }
