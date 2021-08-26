@@ -5,7 +5,7 @@ import {encoding} from './const'
 
 /**
  * Mode of reading file encoding
- * @param inputFileName name of current file in current directory
+ * @param inputFileName name of current files in current directory
  */
 export const getReadFile = (inputFileName: string) => {
     const readFile = util.promisify(fs.readFile)
