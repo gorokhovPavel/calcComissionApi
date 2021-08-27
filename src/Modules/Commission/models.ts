@@ -10,7 +10,7 @@ export interface ITransaction {
 }
 
 /**
- * About amount and currency
+ * About amount/currency
  */
 export interface ICurrOperation {
     amount: number
